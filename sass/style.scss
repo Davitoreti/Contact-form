@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E0F1E7;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+    gap: 1rem;
+    border-radius: 10px;
+    background-color: white;
+
+    #title-form{
+        font-size: 1.6rem;
+    }
+    
+    .form__group-name{ 
+        
+    }
+}
+
