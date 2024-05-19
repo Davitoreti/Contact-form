@@ -5,20 +5,82 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #E0F1E7;
 }
 
-.form__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5rem;
-  gap: 1rem;
-  border-radius: 10px;
+.contact-form {
+  display: grid;
+  grid-template-areas: "title-form title-form" "form__group-firstName form__group-lastName" "form__group-email form__group-email" "queryType queryType" "form__group-message form__group-message" "text__consent text__consent" "button-submit button-submit";
+  place-items: center;
+  gap: 2rem;
+  width: 90%;
   background-color: white;
 }
-.form__container #title-form {
-  font-size: 1.6rem;
+
+#title-form {
+  position: relative;
+  right: 15rem;
+  grid-area: title-form;
+}
+
+.form__group-firstName {
+  display: block;
+  position: relative;
+  right: 10rem;
+  grid-area: form__group-firstName;
+}
+
+.form__group-lastName {
+  display: block;
+  position: relative;
+  right: 15rem;
+  grid-area: form__group-lastName;
+}
+
+.form__group-email {
+  position: relative;
+  margin: 1rem 2rem;
+  grid-row: form__group-email;
+}
+.form__group-email input {
+  width: 33rem;
+}
+
+.queryType {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  grid-area: queryType;
+}
+
+.form__group-message {
+  display: block;
+  position: relative;
+  right: 5.2rem;
+  gap: 10px;
+  grid-area: form__group-message;
+}
+.form__group-message textarea {
+  width: 78vw;
+}
+
+.text__consent {
+  display: flex;
+  position: relative;
+  right: 12.8rem;
+  grid-area: text__consent;
+}
+
+.button-submit {
+  position: relative;
+  right: 4rem;
+  grid-area: button-submit;
+}
+.button-submit button {
+  width: 70vw;
 }
 
 /*# sourceMappingURL=style.css.map */
