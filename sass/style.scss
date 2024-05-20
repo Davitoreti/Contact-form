@@ -77,7 +77,6 @@ body{
 
     .generalEnquiry{
         grid-area: generalEnquiry;
-        width: 88%;
         height: 7vh;
     }
 
@@ -91,9 +90,10 @@ body{
         justify-content: flex-start;
         align-items: center;
         gap: 0.5rem;
-        margin: 0.3rem 0.4rem;
+        margin: 0.3rem 0rem;
         margin-bottom: 0.8rem;
         padding: 0rem 0.5rem;
+        width: 100%;
     }
     
     .form__group-message{
@@ -133,60 +133,40 @@ body{
     }
 }
 
-@media (min-width: 320px){
+@media (min-width: 320px) and (max-width: 568px){
     .contact-form{
         display: block;
         margin: 3rem 2rem;
 
         .generalEnquiry, .supportRequest{
+            position: relative;
+            left: 1.5%;
             margin-top: 0.5rem;
-            width: 85.2%;
+            width: 66.5vw;
         } 
     }
 }
 
-@media (min-width: 375px){
-    .contact-form{
-        display: block;
-        margin: 3rem 2rem;
-
-        .generalEnquiry, .supportRequest{
-            margin-top: 0.5rem;
-            width: 88.5%;
-        } 
-    }
-}
-
-@media (min-width: 425px){
-    .contact-form{
-        display: block;
-        margin: 3rem 2rem;
-
-        .generalEnquiry, .supportRequest{
-            margin-top: 0.5rem;
-            width: 90.4%;
-        } 
-    }
-}
-
-@media (width: 768px){
+@media (min-width: 668px) and (max-width: 1024px){
     .contact-form{
         display: block;
         margin: 5rem 10rem;
 
         .generalEnquiry, .supportRequest{
             margin-top: 0.6rem;
-            width: 92.3%;
+            width: 43.5vw;
         }   
     }
 }
 
-@media (width: 1024px){
+@media (min-width: 1025px) and (max-width: 1920px){
     .contact-form{
-        margin: 5rem 15rem;
+        margin: 5rem 20rem;
 
         .generalEnquiry, .supportRequest{
-            width: 94.1%;
+            position: relative;
+            left: 1.5%;
+            width: 22.8vw;
         }   
     }
 }
@@ -194,19 +174,11 @@ body{
 @media (width:1440px){
     .contact-form{
         margin: 6rem 25rem;
-
-        .generalEnquiry, .supportRequest{
-            width: 95%;
-        }   
     }
 }
 
 @media (width: 2560px){
     .contact-form{
         margin: 8rem 50rem;
-
-        .generalEnquiry, .supportRequest{
-            width: 96.6%;
-        }
     }
 }
