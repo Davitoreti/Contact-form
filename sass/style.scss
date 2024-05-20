@@ -1,14 +1,14 @@
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #E0F1E7;
+body{
+    background-color: #E1F1E7;
+}
+
+@mixin borderRadius($border-radius) {
+    border-radius:  $border-radius;
 }
 
 .contact-form{
@@ -18,82 +18,195 @@ body {
     "form__group-firstName form__group-lastName"
     "form__group-email form__group-email"
     "queryType queryType"
+    "generalEnquiry supportRequest"
     "form__group-message form__group-message"
     "text__consent text__consent"
     "button-submit button-submit";
-    place-items: center;
-    gap: 2rem;
-    width: 90%;
     background-color: white;
-}
+    margin: 5rem 25rem;
+    padding: 30px;
+    @include borderRadius(0.8rem);
+    
+
+    input, fieldset, textarea, button{
+        @include borderRadius(0.4rem);
+        border: 1px solid black;
+    }
 
     #title-form{
-        position: relative;
-        right: 15rem;
         grid-area: title-form;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 1.7rem;
     }
 
     .form__group-firstName{
-        display: block;
-        position: relative;
-        right: 10rem;
         grid-area: form__group-firstName;
-    }
-
-    .form__group-lastName{
-        display: block;
-        position: relative;
-        right: 15rem;
-        grid-area: form__group-lastName;
-    }
-
-    .form__group-email{
-        position: relative;
-        margin: 1rem 2rem;
-        grid-row: form__group-email;
 
         input{
-            width: 33rem;
+            width: 100%;
+            height: 7vh;
+            margin-top: 0.5rem
         }
     }
 
-    .queryType{
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        grid-area: queryType;
+    .form__group-lastName{
+        @extend .form__group-firstName;
+        grid-area: form__group-lastName;
     }
 
+    .form__group-firstName, .form__group-lastName{
+        margin: 1rem 0.4rem;
+    }
+
+    .form__group-email{
+        margin: 0.4rem;
+        grid-area: form__group-email;
+
+        input{
+            margin-top: 0.5rem;
+            margin-bottom: 0.4rem;
+            width: 100%;
+            height: 7vh;
+        }
+    }
+
+    span{
+        margin: 0.3rem 0.4rem;
+    }
+
+    .generalEnquiry{
+        grid-area: generalEnquiry;
+        width: 88%;
+        height: 7vh;
+    }
+
+    .supportRequest{
+        @extend .generalEnquiry;
+        grid-area: supportRequest;
+    }
+
+    .generalEnquiry, .supportRequest{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0.3rem 0.4rem;
+        margin-bottom: 0.8rem;
+        padding: 0rem 0.5rem;
+    }
+    
     .form__group-message{
-        display: block;
-        position: relative;
-        right: 5.2rem;
-        gap: 10px;
+        margin: 0.3rem 0.4rem;
         grid-area: form__group-message;
 
         textarea{
-            width: 78vw;
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 14vh;
         }
     }
 
     .text__consent{
-        display: flex;
-        position: relative;
-        right: 12.8rem;
+        width: 100%;
+        margin: 1.5rem 0.4rem;
+        white-space: normal;
         grid-area: text__consent;
-    }
 
-    .button-submit{
-        position: relative;
-        right: 4rem;
-        grid-area: button-submit;
-
-        button{
-            width: 70vw;
+        label{
+            padding: 0rem 0.5rem;
         }
     }
 
+    .button-submit{
+        display: flex;
+        justify-content: center;
+        grid-area: button-submit;
 
+        button{
+            width: 100%;
+            height: 7vh;
+            border: 1px solid transparent;
+            background-color: #207C69;
+            color: white;
+        }
+    }
+}
 
+@media (min-width: 320px){
+    .contact-form{
+        display: block;
+        margin: 3rem 2rem;
 
+        .generalEnquiry, .supportRequest{
+            margin-top: 0.5rem;
+            width: 85.2%;
+        } 
+    }
+}
 
+@media (min-width: 375px){
+    .contact-form{
+        display: block;
+        margin: 3rem 2rem;
+
+        .generalEnquiry, .supportRequest{
+            margin-top: 0.5rem;
+            width: 88.5%;
+        } 
+    }
+}
+
+@media (min-width: 425px){
+    .contact-form{
+        display: block;
+        margin: 3rem 2rem;
+
+        .generalEnquiry, .supportRequest{
+            margin-top: 0.5rem;
+            width: 90.4%;
+        } 
+    }
+}
+
+@media (width: 768px){
+    .contact-form{
+        display: block;
+        margin: 5rem 10rem;
+
+        .generalEnquiry, .supportRequest{
+            margin-top: 0.6rem;
+            width: 92.3%;
+        }   
+    }
+}
+
+@media (width: 1024px){
+    .contact-form{
+        margin: 5rem 15rem;
+
+        .generalEnquiry, .supportRequest{
+            width: 94.1%;
+        }   
+    }
+}
+
+@media (width:1440px){
+    .contact-form{
+        margin: 6rem 25rem;
+
+        .generalEnquiry, .supportRequest{
+            width: 95%;
+        }   
+    }
+}
+
+@media (width: 2560px){
+    .contact-form{
+        margin: 8rem 50rem;
+
+        .generalEnquiry, .supportRequest{
+            width: 96.6%;
+        }
+    }
+}
