@@ -119,10 +119,10 @@ body {
   }
   .contact-form .generalEnquiry, .contact-form .supportRequest {
     margin-top: 0.6rem;
-    width: 43.5vw;
+    width: 59.1vw;
   }
 }
-@media (min-width: 1025px) and (max-width: 1920px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
   .contact-form {
     margin: 5rem 20rem;
   }
@@ -132,14 +132,34 @@ body {
     width: 22.8vw;
   }
 }
-@media (width: 1440px) {
+@media (min-width: 1441px) and (max-width: 1680px) {
   .contact-form {
-    margin: 6rem 25rem;
+    margin: 5rem 30rem;
+  }
+  .contact-form .generalEnquiry, .contact-form .supportRequest {
+    position: relative;
+    left: 1.5%;
+    width: 17.7vw;
   }
 }
-@media (width: 2560px) {
+@media (min-width: 1681px) and (max-width: 1920px) {
   .contact-form {
-    margin: 8rem 50rem;
+    margin: 5rem 30rem;
+  }
+  .contact-form .generalEnquiry, .contact-form .supportRequest {
+    position: relative;
+    left: 1.5%;
+    width: 21.7vw;
+  }
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .contact-form {
+    margin: 5rem 30rem;
+  }
+  .contact-form .generalEnquiry, .contact-form .supportRequest {
+    position: relative;
+    left: 0.8%;
+    width: 28.9vw;
   }
 }
 
